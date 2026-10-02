@@ -15,15 +15,16 @@
     <repositories>
         <repository>
             <id>papermc</id>
-            <url>https://papermc.io</url>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
+        <!-- Updated dynamic range selector explicitly matching the 26.3 architecture -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.4-R0.1-SNAPSHOT</version>
+            <version>[26.3.build,)</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
