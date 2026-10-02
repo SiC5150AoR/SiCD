@@ -4,14 +4,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # Upgraded to v4.2.2+ which runs natively on modern GitHub runner nodes
+      - uses: actions/checkout@v4.2.2 
+      
+      # Upgraded to v4.4.0+ to fully support modern Node requirements
       - name: Set up JDK 25
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v4.4.0
         with:
           java-version: '25'
           distribution: 'temurin'
+          
       - name: Build Code with Maven
         run: mvn clean package
+        
       - name: Export JAR File
         uses: actions/upload-artifact@v4
         with:
