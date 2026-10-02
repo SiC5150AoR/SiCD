@@ -1,0 +1,5 @@
+name: SiCD
+version: 1.0
+main: me.yourname.sicd.SiCD
+api-version: '1.21'
+description: Piston-shulker desync exploit built for modern Paper 26.3 engines.
